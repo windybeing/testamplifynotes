@@ -1,13 +1,12 @@
 // src/App.js
-
+import React from 'react'
+import Amplify, { Analytics } from 'aws-amplify';
+import { withAuthenticator } from 'aws-amplify-react'
 import { css } from 'glamor'
 
-import React from 'react'
+import aws_exports from './aws-exports';
 import Form from './components/Form'
 import Notes from './components/Notes'
-import Amplify, { Analytics } from 'aws-amplify';
-import aws_exports from './aws-exports';
-import { withAuthenticator } from 'aws-amplify-react'
 
 Amplify.configure(aws_exports);
 class App extends React.Component {
